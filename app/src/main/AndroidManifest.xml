@@ -10,16 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
+            android:name=".activity_iceboxList"
+            android:exported="false" />
+        <activity
+            android:name=".activity_menuList"
+            android:exported="false"
+            android:parentActivityName=".DisplayMessageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayMessageActivity" />
+        </activity>
+        <activity
             android:name=".DisplayMessageActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity">
+
+            <!-- 뒤로가기시 상위 activity를 지정하여 이동 가능. -->
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
+                android:value=".MainActivity" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
