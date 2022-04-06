@@ -11,7 +11,12 @@
         android:theme="@style/Theme.MyFirstApp">
         <activity
             android:name=".activity_iceboxList"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".activity_menuList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity_menuList" />
+        </activity>
         <activity
             android:name=".activity_menuList"
             android:exported="false"
